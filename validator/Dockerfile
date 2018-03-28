@@ -1,8 +1,6 @@
-FROM ethresearch/pyethapp
+FROM localethereum/pyethapp
 
 COPY default_data/config /root/default_config
-COPY filebeat.yml /etc/filebeat/filebeat.yml
-RUN chmod go-w /etc/filebeat/filebeat.yml
 COPY default_data/log /root/log
 COPY start.sh /root/
 EXPOSE 30303

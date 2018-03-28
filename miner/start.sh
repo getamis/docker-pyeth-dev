@@ -1,5 +1,3 @@
-echo "Running filebeat service"
-service filebeat start
 echo "BOOTSTRAP_NODE is $BOOTSTRAP_NODE"
 if [ -z "$BOOTSTRAP_NODE" ]; then echo "BOOTSTRAP_NODE must be set" && exit 1; fi
 openssl rand -hex 32 > /root/.config/pyethapp/privkey.hex
